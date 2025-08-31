@@ -23,14 +23,14 @@ const Navbar = () => {
             key={idx}
             className={`${
               icon.type === "logo" ? "icon" : "home hover:cursor-pointer hover:scale-110"
-            } bg-darkgray h-10 w-10 rounded-full p-1 flex items-center justify-center transition bg-neutral-800`}
+            } bg-[#242424] h-10 w-10 rounded-full p-1 flex items-center justify-center transition bg-neutral-800`}
           >
             <img src={icon.src} alt={icon.alt} className="h-full" />
           </div>
         ))}
 
         {/* Searchbar */}
-        <div className="searchbar flex items-center bg-darkgray rounded-full px-3 py-1 transition-all duration-500 ease-in hover:bg-lightblack gap-2 bg-neutral-800">
+        <div className="searchbar flex items-center bg-[#242424] rounded-full px-3 py-1 transition-all duration-500 ease-in hover:bg-[#121212] gap-2 bg-neutral-800">
           <img
             src="/images/svg/search.svg"
             alt="Search Icon"
