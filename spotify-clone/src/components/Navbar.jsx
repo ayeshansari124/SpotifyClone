@@ -1,4 +1,4 @@
-// src/components/Navbar.jsx
+
 import React from "react";
 
 const leftIcons = [
@@ -14,7 +14,7 @@ const rightOptions = [
 
 const Navbar = () => {
   return (
-    <div className="navbar sticky top-0 bg-black text-white w-full h-[10vh] flex justify-between items-center px-4">
+    <div className="navbar sticky top-0 bg-black text-white w-full flex justify-between items-center px-4 py-3">
       {/* LEFT SECTION */}
       <div className="left flex items-center gap-4">
         {/* Logo + Home */}

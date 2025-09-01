@@ -45,7 +45,7 @@ const LanguageSelector = () => (
 
 const Sidebar = () => {
   return (
-    <aside className="w-[25vw] h-[87vh] m-2 bg-[#121212] rounded-lg sticky top-0">
+    <aside className="w-[25vw] flex flex-col bg-[#121212] rounded-lg m-2">
       {/* Header */}
       <div className="flex justify-between items-center h-[10vh] p-4 font-bold">
         <span>Your Library</span>
