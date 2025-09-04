@@ -1,12 +1,64 @@
-# React + Vite
+# 🎧 Spotify Clone – Web Player for Music Lovers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **beautifully crafted frontend clone** of the official **Spotify Web Player**, built using **HTML**, **Tailwind CSS**, and **JavaScript**.  
+It captures the sleek design, interactivity, and layout of Spotify, offering a modern and responsive music browsing experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📌 Summary
 
-## Expanding the ESLint configuration
+This is a **frontend-only** large-scale project inspired by Spotify.  
+It demonstrates strong command over:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **HTML5** semantic layout
+- **Tailwind CSS** utility-first styling
+- **Responsive UI components**
+- **Interactive elements** (like hover play buttons and navbar search)
+
+
+---
+
+## 💻 Features
+
+✅ Sticky and responsive **navbar** with search and login  
+✅ Interactive **sidebar** for playlists and podcasts  
+✅ Horizontal scrollable sections for **Trending Songs**, **Popular Artists**, and **Albums**  
+✅ Modern **hover play button** animation  
+✅ Fully **responsive layout** for desktop and tablets  
+✅ Clean **footer** with external links and social icons  
+
+---
+
+## 🛠️ Tech Stack
+
+- **HTML5** – Structure
+- **Tailwind CSS** – Styling with responsiveness and utility classes
+- **JavaScript (Upcoming)** – For future audio logic, interactivity
+
+---
+
+## 🚀 Deployment
+
+🔗 [Click here to view the live site](https://ayeshasspotifyclone.netlify.app/)
+
+---
+
+## 🧩 Upcoming Features
+
+- 🎵 Add audio playback using JS `<audio>` and event listeners  
+- 💚 Like/follow interactions  
+- 🔍 Dynamic search suggestions  
+- 🎨 Theme toggle: Light/Dark modes
+
+---
+
+## 📝 License
+
+This project is for educational/demo purposes only.  
+No commercial use intended. Spotify™ is a registered trademark of Spotify AB.
+
+---
+
+Built with ❤️ by **Ayesha Ali** as part of learning and mastering front-end development.
+
+

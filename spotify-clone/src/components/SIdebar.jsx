@@ -56,7 +56,6 @@ const Sidebar = () => {
         />
       </div>
 
-      {/* Reusable Cards */}
       <LibraryCard
         title="Create Your First Playlist"
         subtitle="It’s easy, we’ll help you"
@@ -68,10 +67,8 @@ const Sidebar = () => {
         buttonText="Browse Podcasts"
       />
 
-      {/* Footer Links */}
       <FooterLinks />
 
-      {/* Language Selector */}
       <LanguageSelector />
     </aside>
   );

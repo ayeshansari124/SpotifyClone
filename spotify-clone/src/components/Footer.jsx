@@ -1,5 +1,3 @@
-// src/components/Footer.jsx
-
 import React from "react";
 
 const sections = [
@@ -31,7 +29,6 @@ const Footer = () => {
   return (
     <>
       <footer className="flex flex-wrap justify-around m-5 p-5 h-[15vw]">
-        {/* Sections */}
         {sections.map((section, idx) => (
           <div key={idx} className="flex flex-col">
             <span className="font-bold">{section.title}</span>

@@ -1,4 +1,3 @@
-
 import React from "react";
 
 const leftIcons = [
@@ -15,9 +14,7 @@ const rightOptions = [
 const Navbar = () => {
   return (
     <div className="navbar sticky top-0 bg-black text-white w-full flex justify-between items-center px-4 py-3">
-      {/* LEFT SECTION */}
       <div className="left flex items-center gap-4">
-        {/* Logo + Home */}
         {leftIcons.map((icon, idx) => (
           <div
             key={idx}
@@ -29,7 +26,6 @@ const Navbar = () => {
           </div>
         ))}
 
-        {/* Searchbar */}
         <div className="searchbar flex items-center bg-[#242424] rounded-full px-3 py-1 transition-all duration-500 ease-in hover:bg-[#121212] gap-2 bg-neutral-800">
           <img
             src="/images/svg/search.svg"
@@ -50,9 +46,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* RIGHT SECTION */}
       <div className="right flex items-center gap-4 text-gray-300">
-        {/* Options */}
         <div className="options flex gap-4">
           {rightOptions.map((opt, idx) => (
             <button key={idx} className="hover:scale-105 transition">
@@ -61,19 +55,16 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Divider */}
         <span className="w-px h-6 bg-gray-500"></span>
 
-        {/* Install App */}
         <div className="install flex items-center gap-2 hover:scale-105 cursor-pointer transition">
           <img src="/images/svg/download.svg" alt="Download" className="h-6 w-6" />
           <button>Install App</button>
         </div>
 
-        {/* Auth Buttons */}
         <button className="signup hover:scale-105 transition">Sign Up</button>
         <button className="login bg-white text-black rounded-full px-5 py-2 font-bold hover:scale-110 transition-all duration-500 ease-in">
-          Login
+          Log in
         </button>
       </div>
     </div>
