@@ -7,14 +7,17 @@ import PopularAlbums from "../components/sections/PopularAlbums";
 
 function Home() {
   return (
-    <div className="bg-black h-screen flex flex-col">
+    <div className="bg-black min-h-screen flex flex-col">
       <Navbar />
-      <div className="flex flex-1 overflow-hidden">
-        <div className="w-[25vw] h-full bg-black">
+      <div className="flex flex-col sm:flex-row flex-1 overflow-hidden">
+        {/* Sidebar */}
+        <div className="w-full sm:w-[25vw] h-full">
           <Sidebar />
         </div>
-        <div className="flex-1 overflow-y-auto scrollbar-hide">
-          <div className="ml-6 mt-2 bg-[#121212] rounded-lg p-4">
+
+        {/* Main Content */}
+        <div className="flex-1 overflow-y-auto scrollbar-hide p-2 sm:p-6">
+          <div className="bg-[#121212] rounded-lg p-2 sm:p-4 flex flex-col gap-4">
             <TrendingSongs />
             <PopularArtists />
             <PopularAlbums />

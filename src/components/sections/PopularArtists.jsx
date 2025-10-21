@@ -11,16 +11,14 @@ const artists = [
 
 export default function PopularArtists() {
   return (
-    <div className="m-5">
-      <div className="flex justify-between items-center">
-        <h2 className="font-bold text-2xl cursor-pointer hover:underline">
-          Popular Artists
-        </h2>
-        <button className="text-sm hover:underline cursor-pointer">Show All</button>
+    <div className="m-2 sm:m-5">
+      <div className="flex justify-between items-center text-gray-200">
+        <h2 className="font-bold text-xl sm:text-2xl cursor-pointer hover:underline">Popular Artists</h2>
+        <button className="text-xs sm:text-sm hover:underline cursor-pointer">Show All</button>
       </div>
-      <div className="flex gap-4 p-4 m-2 overflow-x-auto scrollbar-hide">
-        {artists.map((artist, index) => (
-          <ArtistCard key={index} {...artist} />
+      <div className="flex gap-2 sm:gap-4 p-2 sm:p-4 m-2 overflow-x-auto scrollbar-hide scroll-x">
+        {artists.map((item, index) => (
+          <ArtistCard key={index} {...item} />
         ))}
       </div>
     </div>

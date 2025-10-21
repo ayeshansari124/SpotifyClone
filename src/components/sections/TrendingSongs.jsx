@@ -12,7 +12,7 @@ const songs = [
 export default function TrendingSongs() {
   return (
     <div className="m-5">
-      <div className="flex justify-between items-center">
+      <div className="flex justify-between items-center text-gray-200">
         <h2 className="font-bold text-2xl cursor-pointer hover:underline">Trending Songs</h2>
         <button className="text-sm hover:underline cursor-pointer">Show All</button>
       </div>

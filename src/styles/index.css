@@ -2,11 +2,99 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom scrollbar hide */
+/* Global body styling */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  scroll-behavior: smooth; /* Smooth scrolling */
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+/* Hide scrollbars for cleaner UI */
+
+/* Chrome, Safari, Edge */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+
+/* Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+/* Custom scrollbar for desktop if needed */
+.scrollbar-custom::-webkit-scrollbar {
+  height: 6px;
+  width: 6px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Responsive text scaling */
+.text-responsive {
+  font-size: 0.75rem; /* default small for mobile */
+}
+
+@media (min-width: 640px) { /* sm */
+  .text-responsive {
+    font-size: 0.875rem;
+  }
+}
+
+@media (min-width: 768px) { /* md */
+  .text-responsive {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) { /* lg */
+  .text-responsive {
+    font-size: 1.125rem;
+  }
+}
+
+/* Ensure images scale nicely on mobile */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility classes for mobile padding adjustments */
+.p-responsive {
+  padding: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .p-responsive {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .p-responsive {
+    padding: 1rem;
+  }
+}
+
+/* Main content scroll area */
+.main-scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* smooth momentum scrolling for iOS */
+}
+
+/* Horizontal scroll sections */
+.scroll-x {
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
 }
