@@ -16,7 +16,7 @@ export default function TrendingSongs() {
         <h2 className="font-bold text-2xl cursor-pointer hover:underline">Trending Songs</h2>
         <button className="text-sm hover:underline cursor-pointer">Show All</button>
       </div>
-      <div className="flex gap-4 p-4 m-2 overflow-x-auto scrollbar-hide">
+      <div className="flex gap-2 sm:gap-4 p-2 sm:p-4 flex-wrap sm:flex-nowrap overflow-x-auto scrollbar-hide">
         {songs.map((song, index) => (
           <SongCard key={index} {...song} />
         ))}

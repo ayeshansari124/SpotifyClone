@@ -16,7 +16,7 @@ export default function PopularArtists() {
         <h2 className="font-bold text-xl sm:text-2xl cursor-pointer hover:underline">Popular Artists</h2>
         <button className="text-xs sm:text-sm hover:underline cursor-pointer">Show All</button>
       </div>
-      <div className="flex gap-2 sm:gap-4 p-2 sm:p-4 m-2 overflow-x-auto scrollbar-hide scroll-x">
+      <div className="flex gap-2 sm:gap-4 p-2 sm:p-4 flex-wrap sm:flex-nowrap overflow-x-auto scrollbar-hide">
         {artists.map((item, index) => (
           <ArtistCard key={index} {...item} />
         ))}

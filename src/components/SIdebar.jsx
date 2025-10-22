@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const LibraryCard = ({ title, subtitle, buttonText }) => (
   <div className="flex flex-col bg-neutral-800 m-2 sm:m-5 rounded-lg p-2 ">
@@ -38,33 +38,70 @@ const LanguageSelector = () => (
 );
 
 const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <aside className="w-full sm:w-[25vw] flex flex-col bg-[#121212] rounded-lg m-2 fixed">
-      {/* Header */}
-      <div className="flex justify-between items-center h-[10vh] p-2 sm:p-4 font-bold">
-        <span className="text-sm sm:text-base text-gray-200">Your Library</span>
-        <img
-          src="./images/svg/add.svg"
-          alt="add"
-          className="h-6 sm:h-8 w-6 sm:w-8 rounded-full m-1 p-1 hover:scale-110 hover:bg-[#242424] cursor-pointer"
-        />
+    <>
+      {/* Hamburger button for mobile */}
+      <div className="sm:hidden fixed top-4 left-2 z-50">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-gray-200 bg-[#121212] p-2 rounded-lg hover:bg-[#242424] transition"
+        >
+          {isOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
+        </button>
       </div>
 
-      <LibraryCard
-        title="Create Your First Playlist"
-        subtitle="It’s easy, we’ll help you"
-        buttonText="Create Playlist"
-      />
-      <LibraryCard
-        title="Let’s find some podcasts to follow"
-        subtitle="We’ll keep you updated on new episodes"
-        buttonText="Browse Podcasts"
-      />
+      {/* Sidebar */}
+      <aside
+        className={`
+          w-full sm:w-[25vw] flex flex-col bg-[#121212] rounded-lg m-2 fixed top-0 left-0 h-full
+          transform ${isOpen ? "translate-x-0" : "-translate-x-full"} sm:translate-x-0
+          transition-transform duration-300 ease-in-out z-40
+        `}
+      >
+        {/* Header */}
+        <div className="flex justify-between items-center h-[10vh] p-2 sm:p-4 font-bold">
+          <span className="text-sm sm:text-base text-gray-200">Your Library</span>
+          <img
+            src="./images/svg/add.svg"
+            alt="add"
+            className="h-6 sm:h-8 w-6 sm:w-8 rounded-full m-1 p-1 hover:scale-110 hover:bg-[#242424] cursor-pointer"
+          />
+        </div>
 
-      <FooterLinks />
+        <LibraryCard
+          title="Create Your First Playlist"
+          subtitle="It’s easy, we’ll help you"
+          buttonText="Create Playlist"
+        />
+        <LibraryCard
+          title="Let’s find some podcasts to follow"
+          subtitle="We’ll keep you updated on new episodes"
+          buttonText="Browse Podcasts"
+        />
 
-      <LanguageSelector />
-    </aside>
+        <FooterLinks />
+
+        <LanguageSelector />
+      </aside>
+
+      {/* Overlay for mobile */}
+      {isOpen && (
+        <div
+          className="sm:hidden fixed inset-0 bg-black opacity-50 z-30"
+          onClick={() => setIsOpen(false)}
+        />
+      )}
+    </>
   );
 };
 
