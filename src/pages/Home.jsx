@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Sidebar from "../components/Sidebar";
+import Section from "../components/Section";
 import TrendingSongs from "../components/sections/TrendingSongs";
 import PopularArtists from "../components/sections/PopularArtists";
 import PopularAlbums from "../components/sections/PopularAlbums";
@@ -10,9 +10,9 @@ function Home() {
     <div className="bg-black min-h-screen flex flex-col">
       <Navbar />
       <div className="flex flex-col sm:flex-row flex-1 overflow-hidden">
-        {/* Sidebar */}
+        {/* Section */}
         <div className="w-full sm:w-[25vw] h-full">
-          <Sidebar />
+          <Section />
         </div>
 
         {/* Main Content */}

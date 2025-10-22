@@ -37,7 +37,7 @@ const LanguageSelector = () => (
   </div>
 );
 
-const Sidebar = () => {
+const Section = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -60,7 +60,7 @@ const Sidebar = () => {
         </button>
       </div>
 
-      {/* Sidebar */}
+      {/* Section */}
       <aside
         className={`
           w-full sm:w-[25vw] flex flex-col bg-[#121212] rounded-lg m-2 fixed top-0 left-0 h-full
@@ -105,4 +105,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Section;
